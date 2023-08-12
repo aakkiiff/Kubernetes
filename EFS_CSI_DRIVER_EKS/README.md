@@ -1,5 +1,5 @@
 # **Integrating AWS EKS With AWS  EKS Using EFS CSI Driver** [EASY Installation-not recommended for production]
-this setup does not follow the best practices,hence not for production.
+this setup does not follow the best practices,hence not for production.just fast and easy demo.
 you will have to modify some steps to use it for the production.
 such as not using the full access, using fine grained permissions and attaching them to the service account with the oidc provider,instead of attaching the permissions directly to the ec2/nodes. 
 
