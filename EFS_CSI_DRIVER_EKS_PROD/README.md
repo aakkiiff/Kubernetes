@@ -62,19 +62,19 @@ wait for the cluster to be up and running. This might take 10-15 minutes
 
  - [ ] Create the policy. You can change `EKS_EFS_CSI_Driver_Policy` to a different name, but if you do, make sure to change it in later steps too.
 
-    aws iam create-policy \\
-    --policy-name EKS_EFS_CSI_Driver_Policy \\
+    aws iam create-policy \
+    --policy-name EKS_EFS_CSI_Driver_Policy \
     --policy-document file://iam-policy-example.json
 
  - [ ] Run the following command to create the IAM role and Kubernetes service account. It also attaches the policy to the role, annotates the Kubernetes service account with the IAM role ARN, and adds the Kubernetes service account name to the trust policy for the IAM role. Replace `my-cluster` with your cluster name and `111122223333` with your account ID. Replace `region-code` with the AWS Region that your cluster is in.
  
 
-    eksctl create iamserviceaccount \\
-    --cluster my-cluster \\
-    --namespace kube-system \\
-    --name efs-csi-controller-sa \\
-    --attach-policy-arn arn:aws:iam::111122223333:policy/EKS_EFS_CSI_Driver_Policy \\
-    --approve \\
+    eksctl create iamserviceaccount \
+    --cluster my-cluster \
+    --namespace kube-system \
+    --name efs-csi-controller-sa \
+    --attach-policy-arn arn:aws:iam::111122223333:policy/EKS_EFS_CSI_Driver_Policy \
+    --approve \
     --region region-code
 
  - [ ] check if the iamservice account created or not,
