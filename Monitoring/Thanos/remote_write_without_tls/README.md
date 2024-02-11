@@ -2,7 +2,7 @@ we are going to setup structure1
 # Structure 1
 
 
-![diagram](https://192.168.100.34/devops/config-yaml/-/raw/dev/monitoring/03.Multi_cluster_V2%28updated%20image%29/assets/MONITOR.jpg)
+![diagram](https://github.com/aakkiiff/Kubernetes/blob/main/Monitoring/Thanos/remote_write_without_tls/assets/MONITOR.jpg?raw=true)
 
 ## Cluster Setup
 
